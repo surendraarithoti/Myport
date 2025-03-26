@@ -1,0 +1,15 @@
+<div class="projects">
+    <div class="projects-container">
+      <h2>Highlighted Projects</h2>
+      <mat-card class="project-card" *ngFor="let project of projectList">
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ project.description }}</p>
+          <p><strong>Technologies:</strong> {{ project.technologies }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button color="primary" *ngIf="project.link" [href]="project.link" target="_blank">View Project</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
